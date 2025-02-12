@@ -1,7 +1,8 @@
 <?php
 include "../backend/myConnection.php";
 
-$uploadDir = './news/';
+$uploadDir = __DIR__ . '/../news/'; // Ensure news folder is outside backend
+
 if (!is_dir($uploadDir)) {
     mkdir($uploadDir, 0777, true);
 }
@@ -14,10 +15,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (!empty($_FILES['image']['name'])) {
         $imageName = basename($_FILES['image']['name']);
         $imagePath = $uploadDir . $imageName;
+        $relativeImagePath = 'news/' . $imageName; // Store relative path for database
 
         // Move uploaded file
         if (move_uploaded_file($_FILES['image']['tmp_name'], $imagePath)) {
-            $image = $imagePath;
+            $image = $relativeImagePath;
         } else {
             echo json_encode(["success" => false, "error" => "File upload failed."]);
             exit();
