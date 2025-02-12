@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 include "../backend/myConnection.php";
 
-$sql = "SELECT * FROM news ORDER BY date_posted DESC LIMIT 10"; 
+$sql = "SELECT * FROM news ORDER BY date_posted DESC LIMIT 6"; 
 $result = $con->query($sql);
 
 $newsData = array();

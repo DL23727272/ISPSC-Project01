@@ -19,9 +19,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link href="styles.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+    <link href="styles.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="img/logo.ico" />
   </head>
   <body>
@@ -88,26 +87,16 @@
 
     <header class="header">
       <div class="container">
-       <div
-        class="d-flex flex-column align-items-center justify-content-center text-center"
+        <div
+          class="d-flex align-items-center d-sm-flex flex-sm-column text-center gap-3"
         >
-          <div>
-            <img
-              src="img/ispsc.png"
-              alt="ISPSC Logo"
-              width="100"
-              height="100"
-              class="me-3"
-            />
-            <img
-              class="bagong-pilipinas"
-              src="img/bagong-pilipinas.png"
-              alt="ISPSC Logo"
-              width="120"
-              height="120"
-              class="me-3"
-            />
-          </div>
+          <img
+            src="img/ispsc.png"
+            alt="ISPSC Logo"
+            width="100"
+            height="100"
+            class="me-3"
+          />
           <div>
             <h1 class="ispsc-logo mb-0">REPUBLIC OF THE PHILIPPINES</h1>
             <hr class="my-2 border-white" />
@@ -186,7 +175,7 @@
       </div>
     </nav>
 
-    <main class="container my-4">
+    <div class="container my-4">
       <h1 class="mb-4">Welcome to ISPSC Department of Psychology</h1>
       <p class="lead">
         Discover the power of the mind at Ilocos Sur Polytechnic State College's
@@ -256,7 +245,7 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row row-cols-4">
         <!------------------- NEWS SECTION------------------------- -->
 
         <div class="col-md-4 mb-4">
@@ -273,14 +262,14 @@
             ></i>
           </div>
 
-          <div id="news-container">
+          <div id="news-container" class="h-50 overflow-y-auto">
             <p>Loading news...</p>
           </div>
         </div>
         <!------------------ END NEWS SECTION ------------------>
 
         <div class="col-md-4 mb-4">
-          <h2>Programs</h2>
+          <h2><i class="fa-solid fa-graduation-cap"></i> Programs</h2>
           <ul class="list-group">
             <li class="list-group-item">Bachelor of Arts in Psychology</li>
             <li class="list-group-item">
@@ -289,8 +278,26 @@
             <li class="list-group-item">PhD in Cognitive Psychology</li>
           </ul>
         </div>
+
         <div class="col-md-4 mb-4">
-          <h2>Quick Links</h2>
+          <h2><i class="fa-solid fa-link"></i> Quick Links</h2>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <a href="#" class="text-decoration-none">Apply Now</a>
+            </li>
+            <li class="list-group-item">
+              <a href="#" class="text-decoration-none">Faculty Directory</a>
+            </li>
+            <li class="list-group-item">
+              <a href="#" class="text-decoration-none"
+                >Research Opportunities</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h2><i class="fa-solid fa-link"></i> Quick Links</h2>
           <ul class="list-group">
             <li class="list-group-item">
               <a href="#" class="text-decoration-none">Apply Now</a>
@@ -306,7 +313,7 @@
           </ul>
         </div>
       </div>
-    </main>
+    </div>
 
     <footer class="bg-light mt-4 py-4">
       <div class="container">
