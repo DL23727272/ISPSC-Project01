@@ -10,6 +10,7 @@ body {
 .ispsc-logo {
   font-family: "Cinzel", serif;
   color: var(--gold-500);
+  font-size: 18px;
 }
 
 .ispsc-logo span {
@@ -35,6 +36,10 @@ body {
 .btn-outline-light:hover {
   background-color: var(--gold-500);
   color: var(--maroon-800);
+}
+
+.navbar-nav .nav-link:active {
+  color: var(--gold-500);
 }
 
 .page-header {
