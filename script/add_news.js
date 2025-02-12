@@ -1,34 +1,16 @@
 $(document).ready(function () {
-    // Fetch and display news
-    function fetchNews() {
-        $.ajax({
-            url: "backend/fetch_news.php",
-            type: "GET",
-            success: function (response) {
-                let newsList = $("#newsList");
-                newsList.empty();
-
-                let newsData = JSON.parse(response);
-                newsData.forEach(news => {
-                    let newsItem = `
-                    <div class="list-group-item">
-                        <h5>${news.title}</h5>
-                        <p>${news.description}</p>
-                        ${news.image ? `<img src="${news.image}" class="img-fluid rounded" alt="News Image">` : ''}
-                        <small class="text-muted">Posted on ${news.created_at}</small>
-                    </div>`;
-                    newsList.append(newsItem);
-                });
-            }
-        });
+    // Ensure fetchNews is globally available
+    function refreshNews() {
+        if (typeof fetchNews === "function") {
+            fetchNews(); // Call fetchNews from fetch_news.js
+        } else {
+            console.error("fetchNews function not found. Make sure fetch_news.js is loaded.");
+        }
     }
-
-    fetchNews();
 
     // Handle form submission
     $("#newsForm").submit(function (e) {
         e.preventDefault();
-
         let formData = new FormData(this);
 
         $.ajax({
@@ -37,16 +19,39 @@ $(document).ready(function () {
             data: formData,
             contentType: false,
             processData: false,
-            success: function (response) {
-                let result = JSON.parse(response);
-                if (result.success) {
-                    $("#addNewsModal").modal("hide");
-                    $("#newsForm")[0].reset();
-                    fetchNews();
-                } else {
-                    alert("Error adding news: " + result.error);
-                }
+        })
+        .done(function (response) {
+            let result = JSON.parse(response);
+            if (result.success) {
+                $("#addNewsModal").modal("hide");
+                $("#newsForm")[0].reset();
+
+                // ✅ Show SweetAlert success message
+                Swal.fire({
+                    icon: "success",
+                    title: "News Added!",
+                    text: "The latest news has been updated.",
+                    timer: 2000,
+                    showConfirmButton: false
+                });
+
+                // ✅ Refresh the news content
+                setTimeout(refreshNews, 1000);
+            } else {
+                // ❌ Show SweetAlert error message
+                Swal.fire({
+                    icon: "error",
+                    title: "Error!",
+                    text: "Error adding news: " + result.error
+                });
             }
+        })
+        .fail(function () {
+            Swal.fire({
+                icon: "error",
+                title: "Oops!",
+                text: "Failed to add news. Please try again."
+            });
         });
     });
 });
