@@ -263,13 +263,8 @@
             style="background-color: #800000; color: white"
           >
             <h2 class="p-2 fs-5 fw-bold">Latest News</h2>
-            <i
-              class="fa-solid fa-plus px-4"
-              data-bs-toggle="modal"
-              data-bs-target="#addNewsModal"
-            ></i>
           </div>
-          <div id="news-container">
+          <div id="news-container" class="mt-4">
             <p>Loading news...</p>
           </div>
         </div>
@@ -277,10 +272,8 @@
         <!--second col-->
         <div class="col-lg-8 col-md-4">
           <!--Top part-->
-          <div
-            class="d-flex justify-content-between gap-2 flex-lg-row flex-md-column flex-sm-column"
-          >
-            <div class="w-50">
+          <div class="d-flex flex-column gap-3">
+            <div>
               <h2><i class="fa-solid fa-graduation-cap"></i> Programs</h2>
               <ul class="list-group">
                 <li class="list-group-item">Bachelor of Arts in Psychology</li>
@@ -290,18 +283,58 @@
                 <li class="list-group-item">PhD in Cognitive Psychology</li>
               </ul>
             </div>
-            <div class="w-50">
+            <div>
               <h2><i class="fa-solid fa-link"></i> Quick Links</h2>
               <ul class="list-group">
                 <li class="list-group-item">
-                  <a href="#" class="text-decoration-none">Apply Now</a>
+                  <a href="#" class="text-decoration-none">
+                    <i
+                      class="fa-solid fa-list-check"
+                      style="color: #800000"
+                    ></i>
+                    PhilGEPS / Procurement
+                  </a>
                 </li>
                 <li class="list-group-item">
-                  <a href="#" class="text-decoration-none">Faculty Directory</a>
+                  <a href="#" class="text-decoration-none">
+                    <i class="fa-solid fa-person" style="color: #800000"></i>
+                    Citizen's Charter</a
+                  >
                 </li>
                 <li class="list-group-item">
                   <a href="#" class="text-decoration-none"
-                    >Research Opportunities</a
+                    ><i
+                      class="fa-solid fa-user-doctor"
+                      style="color: #800000"
+                    ></i>
+                    Job Vacancies
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#" class="text-decoration-none"
+                    ><i class="fa-solid fa-download" style="color: #800000"></i>
+                    Downloads</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <a href="#" class="text-decoration-none"
+                    ><i class="fa-solid fa-star" style="color: #800000"></i>
+                    Quality Assurance</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <a href="#" class="text-decoration-none"
+                    ><i class="fa-solid fa-book" style="color: #800000"></i>
+                    Library Services</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <a href="#" class="text-decoration-none"
+                    ><i
+                      class="fa-solid fa-user-graduate"
+                      style="color: #800000"
+                    ></i>
+                    Alumni</a
                   >
                 </li>
               </ul>
@@ -405,9 +438,7 @@
 
           <!--End Middle part-->
 
-          <div
-            class="d-lg-flex justify-content-lg-between align-items-lg-center d-md-flex flex-md-column align-items-md-center"
-          >
+          <div class="d-flex justify-content-between gap-5 overflow-auto">
             <img
               src="img/image.png"
               alt="WURI logo"
@@ -434,6 +465,21 @@
               alt="OIP logo"
               height="100"
               width="150"
+              class="grayscale-img"
+            />
+
+            <img
+              src="img/ph-seal.png"
+              alt="Bagong Pilipinas logo"
+              height="100"
+              width="250"
+              class="grayscale-img"
+            />
+            <img
+              src="img/freedom.png"
+              alt="Bagong Pilipinas logo"
+              height="100"
+              width="130"
               class="grayscale-img"
             />
           </div>

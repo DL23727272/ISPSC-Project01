@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 12, 2025 at 04:27 AM
+-- Generation Time: Feb 13, 2025 at 08:30 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -32,7 +32,7 @@ CREATE TABLE `news` (
   `title` varchar(255) NOT NULL,
   `content` text NOT NULL,
   `image` varchar(255) NOT NULL,
-  `date_posted` timestamp NOT NULL DEFAULT current_timestamp()
+  `date_posted` date DEFAULT curdate()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -40,9 +40,7 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `title`, `content`, `image`, `date_posted`) VALUES
-(1, 'New Research Grant Awarded', 'A new research grant has been awarded to the psychology department.', 'news/news1.jpg', '2025-02-12 03:09:03'),
-(2, 'Upcoming Psychology Conference', 'Join us for the annual psychology conference.', 'news/news1.jpg', '2025-02-12 03:09:03'),
-(3, 'Student Achievement Spotlight', 'Meet our top-performing psychology student of the year.', 'news/news1.jpg', '2025-02-12 03:09:03');
+(33, 'thursday', 'Update', 'news/ispsc.png', '2025-02-13');
 
 --
 -- Indexes for dumped tables
@@ -62,7 +60,7 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
