@@ -1,0 +1,42 @@
+<?php
+include "../backend/myConnection.php";
+
+$uploadDir = __DIR__ . '/../news/'; // Ensure news folder is outside backend
+
+if (!is_dir($uploadDir)) {
+    mkdir($uploadDir, 0777, true);
+}
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {    
+    $title = $_POST['title'];
+    $content = $_POST['content'];
+    $image = '';
+
+    if (!empty($_FILES['image']['name'])) {
+        $imageName = basename($_FILES['image']['name']);
+        $imagePath = $uploadDir . $imageName;
+        $relativeImagePath = 'news/' . $imageName; // Store relative path for database
+
+        // Move uploaded file
+        if (move_uploaded_file($_FILES['image']['tmp_name'], $imagePath)) {
+            $image = $relativeImagePath;
+        } else {
+            echo json_encode(["success" => false, "error" => "File upload failed."]);
+            exit();
+        }
+    }
+
+    $sql = "INSERT INTO news (title, content, image) VALUES (?, ?, ?)";
+    $stmt = $con->prepare($sql);
+    $stmt->bind_param("sss", $title, $content, $image);
+
+    if ($stmt->execute()) {
+        echo json_encode(["success" => true]);
+    } else {
+        echo json_encode(["success" => false, "error" => $stmt->error]);
+    }
+
+    $stmt->close();
+    $con->close();
+}
+?>

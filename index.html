@@ -1,14 +1,439 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1</title>
-</head>
-<body>
-    <h1>
-        Project 1
-    </h1>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="img/logo.ico" />
+  </head>
+  <body>
+    <!-- Add News Modal -->
+    <div
+      class="modal fade"
+      id="addNewsModal"
+      tabindex="-1"
+      aria-labelledby="addNewsModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title" id="addNewsModalLabel">Add News</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="newsForm" enctype="multipart/form-data">
+              <div class="mb-3">
+                <label for="newsTitle" class="form-label">Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="newsTitle"
+                  name="title"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="newsDescription" class="form-label"
+                  >Description</label
+                >
+                <textarea
+                  class="form-control"
+                  id="newsDescription"
+                  name="content"
+                  rows="3"
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="newsImage" class="form-label">Upload Image</label>
+                <input
+                  type="file"
+                  class="form-control"
+                  id="newsImage"
+                  name="image"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                Add News
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container">
+        <div
+          class="d-flex flex-column align-items-center justify-content-center text-center"
+        >
+          <div>
+            <img
+              src="img/ispsc.png"
+              alt="ISPSC Logo"
+              width="100"
+              height="100"
+              class="me-3"
+            />
+            <img
+              class="bagong-pilipinas"
+              src="img/bagong-pilipinas.png"
+              alt="ISPSC Logo"
+              width="120"
+              height="120"
+              class="me-3"
+            />
+          </div>
+          <div>
+            <h1 class="ispsc-logo mb-0">REPUBLIC OF THE PHILIPPINES</h1>
+            <hr class="my-2 border-white" />
+            <h1 class="ispsc-logo mb-0">
+              ILOCOS SUR POLYTECHNIC STATE COLLEGE
+            </h1>
+            <h2 class="ispsc-logo mb-0">ILOCOS SUR, PHILIPPINES</h2>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                style="color: yellow"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="instruction.html">Instruction</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="research.html">Research</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="extension.html">Extension</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="internationalization.html"
+                >Internationalization</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="psychometrician-reviewer.html"
+                >Psychometrician Reviewer</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="alumni.html">Alumni</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="others.html">Others</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container my-4">
+      <h1 class="mb-4">Welcome to ISPSC Department of Psychology</h1>
+      <p class="lead">
+        Discover the power of the mind at Ilocos Sur Polytechnic State College's
+        Department of Psychology. We offer cutting-edge programs, research
+        opportunities, and a supportive community to help you explore the depths
+        of human behavior and cognition.
+      </p>
+
+      <div class="overflow-hidden">
+        <div class="my-4 psychology-slider">
+          <div class="mx-5 text-secondary d-flex align-items-center gap-3">
+            <div><i class="fas fa-brain"></i></div>
+            <h1 class="fs-5 fw-bold">Cognitive Psychology</h1>
+          </div>
+          <div class="mx-5 text-secondary d-flex align-items-center gap-3">
+            <div><i class="fas fa-user-friends"></i></div>
+            <h1 class="fs-5 fw-bold">Social Psychology</h1>
+          </div>
+          <div class="mx-5 text-secondary d-flex align-items-center gap-3">
+            <div><i class="fas fa-child"></i></div>
+            <h1 class="fs-5 fw-bold">Developmental Psychology</h1>
+          </div>
+          <div class="mx-5 text-secondary d-flex align-items-center gap-3">
+            <div><i class="fas fa-brain"></i></div>
+            <h1 class="fs-5 fw-bold">Neuropsychology</h1>
+          </div>
+          <div class="mx-5 text-secondary d-flex align-items-center gap-3">
+            <div><i class="fas fa-user-md"></i></div>
+            <h1 class="fs-5 fw-bold">Clinical Psychology</h1>
+          </div>
+          <div class="mx-5 text-secondary d-flex align-items-center gap-3">
+            <div><i class="fas fa-brain"></i></div>
+            <h1 class="fs-5 fw-bold">Behavioral Psychology</h1>
+          </div>
+          <div class="mx-5 text-secondary d-flex align-items-center gap-3">
+            <div><i class="fas fa-school"></i></div>
+            <h1 class="fs-5 fw-bold">Educational Psychology</h1>
+          </div>
+          <div class="mx-5 text-secondary d-flex align-items-center gap-3">
+            <div><i class="fas fa-balance-scale"></i></div>
+            <h1 class="fs-5 fw-bold">Forensic Psychology</h1>
+          </div>
+          <div class="mx-5 text-secondary d-flex align-items-center gap-3">
+            <div><i class="fas fa-heartbeat"></i></div>
+            <h1 class="fs-5 fw-bold">Health Psychology</h1>
+          </div>
+          <div class="mx-5 text-secondary d-flex align-items-center gap-3">
+            <div><i class="fas fa-user-tie"></i></div>
+            <h1 class="fs-5 fw-bold">Industrial-Organizational Psychology</h1>
+          </div>
+          <div class="mx-5 text-secondary d-flex align-items-center gap-3">
+            <div><i class="fas fa-user"></i></div>
+            <h1 class="fs-5 fw-bold">Personality Psychology</h1>
+          </div>
+          <div class="mx-5 text-secondary d-flex align-items-center gap-3">
+            <div><i class="fas fa-futbol"></i></div>
+            <h1 class="fs-5 fw-bold">Sports Psychology</h1>
+          </div>
+          <div class="mx-5 text-secondary d-flex align-items-center gap-3">
+            <div><i class="fas fa-exclamation-circle"></i></div>
+            <h1 class="fs-5 fw-bold">Abnormal Psychology</h1>
+          </div>
+          <div class="mx-5 text-secondary d-flex align-items-center gap-3">
+            <div><i class="fas fa-user-astronaut"></i></div>
+            <h1 class="fs-5 fw-bold">Humanistic Psychology</h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- New Section: Bottom Content (News, Programs, Quick Links) -->
+      <div class="row align-items-stretch">
+        <div class="col-4">
+          <div
+            class="d-flex align-items-center justify-content-between"
+            style="background-color: #800000; color: white"
+          >
+            <h2 class="p-2 fs-5 fw-bold">Latest News</h2>
+            <i
+              class="fa-solid fa-plus px-4"
+              data-bs-toggle="modal"
+              data-bs-target="#addNewsModal"
+            ></i>
+          </div>
+          <div id="news-container">
+            <p>Loading news...</p>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="d-flex gap-3">
+            <div>
+              <h2><i class="fa-solid fa-graduation-cap"></i> Programs</h2>
+              <ul class="list-group">
+                <li class="list-group-item">Bachelor of Arts in Psychology</li>
+                <li class="list-group-item">
+                  Master of Arts in Clinical Psychology
+                </li>
+                <li class="list-group-item">PhD in Cognitive Psychology</li>
+              </ul>
+            </div>
+            <div>
+              <h2><i class="fa-solid fa-link"></i> Quick Links</h2>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <a href="#" class="text-decoration-none">Apply Now</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#" class="text-decoration-none">Faculty Directory</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#" class="text-decoration-none"
+                    >Research Opportunities</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End New Section -->
+    </div>
+
+    <!--Contact-->
+    <div class="d-sm-flex flex-sm-column" id="contact">
+      <form action="contactForm.php" method="post" id="contactForms">
+        <h1 class="h6">Contact Us!</h1>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+          <input
+            type="text"
+            name="name"
+            class="form-control"
+            aria-label="Name"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Email</span>
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            aria-label="Email"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm"
+            >Subject</span
+          >
+          <input
+            type="text"
+            name="subject"
+            class="form-control"
+            aria-label="Subject"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm"
+            >Message</span
+          >
+          <textarea
+            type="text"
+            name="message"
+            class="form-control"
+            aria-label="Message"
+            aria-describedby="inputGroup-sizing-sm"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+
+    <footer class="bg-light mt-4 py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Contact Us</h5>
+            <p>
+              123 University Avenue<br />Ilocos Sur, Philippines<br />Phone:
+              (123) 456-7890<br />Email: psychology@ispsc.edu.ph
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h5>Follow Us</h5>
+            <p>
+              <a href="#" class="text-decoration-none me-2">Facebook</a>
+              <a href="#" class="text-decoration-none me-2">Twitter</a>
+              <a href="#" class="text-decoration-none">Instagram</a>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-decoration-none">Privacy Policy</a>
+              </li>
+              <li><a href="#" class="text-decoration-none">Terms of Use</a></li>
+              <li><a href="#" class="text-decoration-none">Site Map</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <p class="text-center mb-0">
+          &copy; 2024 ISPSC Department of Psychology. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/fetch_news.js"></script>
+    <script src="script/add_news.js"></script>
+    <script>
+      $(document).ready(function () {
+        function startMarquee() {
+          let container = $(".psychology-slider");
+          let wrapper = $("<div class='slider-wrapper'></div>").css({
+            display: "flex",
+            width: "max-content",
+          });
+
+          // Wrap all existing elements inside the new wrapper
+          container.wrapInner(wrapper);
+          let slider = container.find(".slider-wrapper");
+
+          // Duplicate content for a seamless loop
+          slider.append(slider.html());
+
+          function animate() {
+            let firstItemWidth = slider.children().first().outerWidth(true); // Get first item width
+            slider.animate(
+              { marginLeft: -firstItemWidth },
+              3000, // Adjust speed for smoother scrolling
+              "linear",
+              function () {
+                // Move first item to the end
+                slider.append(slider.children().first());
+                slider.css("marginLeft", 0);
+                animate();
+              }
+            );
+          }
+          animate();
+        }
+        startMarquee();
+      });
+    </script>
+  </body>
 </html>
