@@ -10,15 +10,55 @@ window.fetchNews = function () {
 
       if (news.length > 0) {
         news.forEach(function (item) {
-          let newsItem = `
-                      <div class="card mb-3">
-                          <img src="${item.image}" class="card-img-top" alt="${item.title}">
-                          <div class="card-body">
-                              <h5 class="card-title fw-bold">${item.title}</h5>
-                              <p class="card-text">${item.content}</p>
-                              <p class="text-muted">${item.date_posted}</p>
-                          </div>
-                      </div>`;
+          let newsItem = ` <div class="my-3" style="
+                position: relative;
+                border-radius: 8px;
+                overflow: hidden;
+                background: #1c1c1c;
+                transition: box-shadow 0.5s ease-in-out;
+            ">
+            
+
+              <img src="${item.image}" alt="${item.title}" style="
+                  width: 100%;
+                  height: 250px;
+                  object-fit: cover;
+                  >
+
+              <div style="
+                  position: relative;
+                  z-index: 2;
+                  
+                  
+              ">
+              
+              
+                  <div class="p-3">
+
+                  <h1 class="fst-italic fs-6" style="color: #ffc107"><i class="fa-solid fa-bullhorn" style="color: #ffc107"></i> Announcement</h1>
+
+                  <div class="gap-2 d-flex">
+                  
+                  <img src="img/ispsc.png" width="50" height="50"/>
+                  <div>
+                    <h5 style="
+                    color: #ffc107;
+                    font-weight: bold;
+                    ">${item.title}</h5>
+                    <p style="color: #d3d3d3; font-size: 0.85rem;"><i class="fa-solid fa-calendar"></i>   ${item.date_posted}</p>
+                  </div>
+
+                  </div>
+                  <p class="fs-italic fst-5" style="color: #ffc107;">${item.content}</p>
+                  </div>
+
+
+                  
+                  
+             
+                 
+              </div>
+            </div>`;
           newsContainer.append(newsItem);
         });
       } else {
