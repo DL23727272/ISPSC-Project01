@@ -19,7 +19,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="styles.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="img/logo.ico" />
   </head>
@@ -87,8 +86,8 @@
 
     <header class="header">
       <div class="container">
-       <div
-        class="d-flex flex-column align-items-center justify-content-center text-center"
+        <div
+          class="d-flex flex-column align-items-center justify-content-center text-center"
         >
           <div>
             <img
@@ -255,74 +254,245 @@
         </div>
       </div>
 
-      <div class="row row-cols-4">
-        <!------------------- NEWS SECTION------------------------- -->
-
-        <div class="col-md-4 mb-4">
+      <!-- New Section: Bottom Content (News, Programs, Quick Links) -->
+      <div class="row">
+        <!--first col-->
+        <div class="col-lg-4 col-md-4">
           <div
             class="d-flex align-items-center justify-content-between"
             style="background-color: #800000; color: white"
           >
             <h2 class="p-2 fs-5 fw-bold">Latest News</h2>
-
             <i
               class="fa-solid fa-plus px-4"
               data-bs-toggle="modal"
               data-bs-target="#addNewsModal"
             ></i>
           </div>
-
-          <div id="news-container" class=" overflow-y-auto">
+          <div id="news-container">
             <p>Loading news...</p>
           </div>
         </div>
-        <!------------------ END NEWS SECTION ------------------>
 
-        <div class="col-md-4 mb-4">
-          <h2><i class="fa-solid fa-graduation-cap"></i> Programs</h2>
-          <ul class="list-group">
-            <li class="list-group-item">Bachelor of Arts in Psychology</li>
-            <li class="list-group-item">
-              Master of Arts in Clinical Psychology
-            </li>
-            <li class="list-group-item">PhD in Cognitive Psychology</li>
-          </ul>
-        </div>
+        <!--second col-->
+        <div class="col-lg-8 col-md-4">
+          <!--Top part-->
+          <div
+            class="d-flex justify-content-between gap-2 flex-lg-row flex-md-column flex-sm-column"
+          >
+            <div class="w-50">
+              <h2><i class="fa-solid fa-graduation-cap"></i> Programs</h2>
+              <ul class="list-group">
+                <li class="list-group-item">Bachelor of Arts in Psychology</li>
+                <li class="list-group-item">
+                  Master of Arts in Clinical Psychology
+                </li>
+                <li class="list-group-item">PhD in Cognitive Psychology</li>
+              </ul>
+            </div>
+            <div class="w-50">
+              <h2><i class="fa-solid fa-link"></i> Quick Links</h2>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <a href="#" class="text-decoration-none">Apply Now</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#" class="text-decoration-none">Faculty Directory</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#" class="text-decoration-none"
+                    >Research Opportunities</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--End Top part-->
 
-        <div class="col-md-4 mb-4">
-          <h2><i class="fa-solid fa-link"></i> Quick Links</h2>
-          <ul class="list-group">
-            <li class="list-group-item">
-              <a href="#" class="text-decoration-none">Apply Now</a>
-            </li>
-            <li class="list-group-item">
-              <a href="#" class="text-decoration-none">Faculty Directory</a>
-            </li>
-            <li class="list-group-item">
-              <a href="#" class="text-decoration-none"
-                >Research Opportunities</a
-              >
-            </li>
-          </ul>
-        </div>
+          <!--Middle part-->
+          <div
+            class="my-3"
+            style="
+              position: relative;
+              background: url('img/farmer.jpg') center/cover no-repeat;
+              border-radius: 8px;
+              overflow: hidden;
+            "
+          >
+            <!-- Overlay -->
+            <div
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(128, 0, 0, 0.6); /* Dark Maroon Overlay */
+              "
+            ></div>
 
-        <div class="col-md-4 mb-4">
-          <h2><i class="fa-solid fa-link"></i> Quick Links</h2>
-          <ul class="list-group">
-            <li class="list-group-item">
-              <a href="#" class="text-decoration-none">Apply Now</a>
-            </li>
-            <li class="list-group-item">
-              <a href="#" class="text-decoration-none">Faculty Directory</a>
-            </li>
-            <li class="list-group-item">
-              <a href="#" class="text-decoration-none"
-                >Research Opportunities</a
-              >
-            </li>
-          </ul>
+            <div class="p-4" style="position: relative; z-index: 2">
+              <h2 style="color: #ffc107; font-weight: bold">
+                Filipino Farmers Face Uncertain Future Amid Climate and Market
+                Turbulence
+              </h2>
+              <br />
+              <p style="color: #ffffff">
+                Filipino farmers have been grappling with a series of
+                unprecedented challenges that threaten both their livelihoods
+                and national food security. The dual impact of severe
+                weather—exacerbated by climate change—and volatile market
+                conditions has led to significant crop losses and rising input
+                costs...
+              </p>
+              <p style="color: #f1f1f1">
+                Meanwhile, government interventions, such as temporary buffer
+                stock releases and revised tariff policies, have provided
+                short-term relief. However, many in the agriculture community
+                believe that long-term solutions require a complete overhaul of
+                existing practices...
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="my-3"
+            style="
+              position: relative;
+              background: url('img/homeless.jpg') center/cover no-repeat;
+              border-radius: 8px;
+              overflow: hidden;
+            "
+          >
+            <!-- Overlay -->
+            <div
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(128, 0, 0, 0.6); /* Dark Maroon Overlay */
+              "
+            ></div>
+
+            <div class="p-4" style="position: relative; z-index: 2">
+              <h2 style="color: #ffc107; font-weight: bold">
+                The Growing Crisis of Urban Homelessness in the Philippines
+              </h2>
+              <br />
+              <p style="color: #ffffff">
+                The issue of homelessness in the Philippines has reached
+                alarming levels, particularly in urban areas like Metro Manila,
+                Cebu, and Davao. Rising living costs, unemployment, and
+                inadequate housing programs have left thousands of families
+                without shelter. Informal settlers often live in makeshift
+                dwellings under bridges, along railways, or in overcrowded
+                evacuation centers, vulnerable to displacement, diseases, and
+                lack of basic services.
+              </p>
+              <p style="color: #f1f1f1">
+                While the government has introduced socialized housing projects
+                and cash aid programs, many critics argue that these efforts are
+                insufficient in addressing the root causes of homelessness. NGOs
+                and private initiatives are stepping in, offering livelihood
+                programs, temporary shelters, and advocacy for policy reforms.
+                However, long-term solutions, such as affordable housing laws
+                and sustainable job creation, remain a challenge.
+              </p>
+            </div>
+          </div>
+
+          <!--End Middle part-->
+
+          <div
+            class="d-lg-flex justify-content-lg-between align-items-lg-center d-md-flex flex-md-column align-items-md-center"
+          >
+            <img
+              src="img/image.png"
+              alt="WURI logo"
+              height="100"
+              width="250"
+              class="grayscale-img"
+            />
+            <img
+              src="img/socotec.png"
+              alt="SOCOTEC logo"
+              height="100"
+              width="180"
+              class="grayscale-img"
+            />
+            <img
+              src="img/bagong-pilipinas.png"
+              alt="Bagong Pilipinas logo"
+              height="100"
+              width="130"
+              class="grayscale-img"
+            />
+            <img
+              src="img/oip.png"
+              alt="OIP logo"
+              height="100"
+              width="150"
+              class="grayscale-img"
+            />
+          </div>
         </div>
       </div>
+
+      <!-- End New Section -->
+    </div>
+
+    <!--Contact-->
+    <div class="d-sm-flex flex-sm-column" id="contact">
+      <form action="contactForm.php" method="post" id="contactForms">
+        <h1 class="h6">Contact Us!</h1>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+          <input
+            type="text"
+            name="name"
+            class="form-control"
+            aria-label="Name"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Email</span>
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            aria-label="Email"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm"
+            >Subject</span
+          >
+          <input
+            type="text"
+            name="subject"
+            class="form-control"
+            aria-label="Subject"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm"
+            >Message</span
+          >
+          <textarea
+            type="text"
+            name="message"
+            class="form-control"
+            aria-label="Message"
+            aria-describedby="inputGroup-sizing-sm"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
     </div>
 
     <footer class="bg-light mt-4 py-4">
@@ -366,7 +536,6 @@
     <script src="script/script.js"></script>
     <script src="script/fetch_news.js"></script>
     <script src="script/add_news.js"></script>
-
     <script>
       $(document).ready(function () {
         function startMarquee() {
