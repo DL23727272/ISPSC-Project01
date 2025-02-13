@@ -14,7 +14,7 @@ window.fetchNews = function () {
                       <div class="card mb-3">
                           <img src="${item.image}" class="card-img-top" alt="${item.title}">
                           <div class="card-body">
-                              <h5 class="card-title">${item.title}</h5>
+                              <h5 class="card-title fw-bold">${item.title}</h5>
                               <p class="card-text">${item.content}</p>
                               <p class="text-muted">${item.date_posted}</p>
                           </div>

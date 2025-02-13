@@ -3,13 +3,13 @@
   --gold-500: #ffd700;
 }
 
-/* * {
-  border: 1px solid red;
-} */
-
 body {
   font-family: Arial, sans-serif;
 }
+
+/* * {
+  border: 1px solid red;
+} */
 
 .ispsc-logo {
   font-family: "Cinzel", serif;
@@ -59,4 +59,13 @@ body {
 
 .bagong-pilipinas {
   filter: drop-shadow(0 0 0.75rem white);
+}
+
+.grayscale-img {
+  filter: grayscale(100%) drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));
+  transition: filter 0.5s ease-in-out;
+}
+
+.grayscale-img:hover {
+  filter: grayscale(0%) drop-shadow(5px 5px 10px rgba(128, 0, 0, 0.7)); /* Maroon shadow */
 }

@@ -255,7 +255,8 @@
       </div>
 
       <!-- New Section: Bottom Content (News, Programs, Quick Links) -->
-      <div class="row align-items-stretch">
+      <div class="row">
+        <!--first col-->
         <div class="col-4">
           <div
             class="d-flex align-items-center justify-content-between"
@@ -268,14 +269,16 @@
               data-bs-target="#addNewsModal"
             ></i>
           </div>
-          <div id="news-container">
+          <div id="news-container" class="h-50 overflow-y-scroll">
             <p>Loading news...</p>
           </div>
         </div>
 
-        <div class="col-4">
-          <div class="d-flex gap-3">
-            <div>
+        <!--second col-->
+        <div class="col-8">
+          <!--Top part-->
+          <div class="d-flex justify-content-between gap-2">
+            <div class="w-50">
               <h2><i class="fa-solid fa-graduation-cap"></i> Programs</h2>
               <ul class="list-group">
                 <li class="list-group-item">Bachelor of Arts in Psychology</li>
@@ -285,7 +288,7 @@
                 <li class="list-group-item">PhD in Cognitive Psychology</li>
               </ul>
             </div>
-            <div>
+            <div class="w-50">
               <h2><i class="fa-solid fa-link"></i> Quick Links</h2>
               <ul class="list-group">
                 <li class="list-group-item">
@@ -302,8 +305,137 @@
               </ul>
             </div>
           </div>
+          <!--End Top part-->
+
+          <!--Middle part-->
+          <div
+            class="my-3"
+            style="
+              position: relative;
+              background: url('img/farmer.jpg') center/cover no-repeat;
+              border-radius: 8px;
+              overflow: hidden;
+            "
+          >
+            <!-- Overlay -->
+            <div
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(128, 0, 0, 0.6); /* Dark Maroon Overlay */
+              "
+            ></div>
+
+            <div class="p-4" style="position: relative; z-index: 2">
+              <h2 style="color: #ffc107; font-weight: bold">
+                Filipino Farmers Face Uncertain Future Amid Climate and Market
+                Turbulence
+              </h2>
+              <br />
+              <p style="color: #ffffff">
+                Filipino farmers have been grappling with a series of
+                unprecedented challenges that threaten both their livelihoods
+                and national food security. The dual impact of severe
+                weather—exacerbated by climate change—and volatile market
+                conditions has led to significant crop losses and rising input
+                costs...
+              </p>
+              <p style="color: #f1f1f1">
+                Meanwhile, government interventions, such as temporary buffer
+                stock releases and revised tariff policies, have provided
+                short-term relief. However, many in the agriculture community
+                believe that long-term solutions require a complete overhaul of
+                existing practices...
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="my-3"
+            style="
+              position: relative;
+              background: url('img/homeless.jpg') center/cover no-repeat;
+              border-radius: 8px;
+              overflow: hidden;
+            "
+          >
+            <!-- Overlay -->
+            <div
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(128, 0, 0, 0.6); /* Dark Maroon Overlay */
+              "
+            ></div>
+
+            <div class="p-4" style="position: relative; z-index: 2">
+              <h2 style="color: #ffc107; font-weight: bold">
+                The Growing Crisis of Urban Homelessness in the Philippines
+              </h2>
+              <br />
+              <p style="color: #ffffff">
+                The issue of homelessness in the Philippines has reached
+                alarming levels, particularly in urban areas like Metro Manila,
+                Cebu, and Davao. Rising living costs, unemployment, and
+                inadequate housing programs have left thousands of families
+                without shelter. Informal settlers often live in makeshift
+                dwellings under bridges, along railways, or in overcrowded
+                evacuation centers, vulnerable to displacement, diseases, and
+                lack of basic services.
+              </p>
+              <p style="color: #f1f1f1">
+                While the government has introduced socialized housing projects
+                and cash aid programs, many critics argue that these efforts are
+                insufficient in addressing the root causes of homelessness. NGOs
+                and private initiatives are stepping in, offering livelihood
+                programs, temporary shelters, and advocacy for policy reforms.
+                However, long-term solutions, such as affordable housing laws
+                and sustainable job creation, remain a challenge.
+              </p>
+            </div>
+          </div>
+
+          <!--End Middle part-->
+
+          <div class="d-flex justify-content-between align-items-center">
+            <img
+              src="img/image.png"
+              alt="WURI logo"
+              height="100"
+              width="250"
+              class="grayscale-img"
+            />
+            <img
+              src="img/socotec.png"
+              alt="SOCOTEC logo"
+              height="100"
+              width="180"
+              class="grayscale-img"
+            />
+            <img
+              src="img/bagong-pilipinas.png"
+              alt="Bagong Pilipinas logo"
+              height="100"
+              width="130"
+              class="grayscale-img"
+            />
+            <img
+              src="img/oip.png"
+              alt="OIP logo"
+              height="100"
+              width="150"
+              class="grayscale-img"
+            />
+          </div>
         </div>
       </div>
+
       <!-- End New Section -->
     </div>
 
