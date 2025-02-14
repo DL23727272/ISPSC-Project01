@@ -26,10 +26,10 @@
     $id = $_GET['id'];
     $row = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM news WHERE id = '$id'"));
     ?>
-<body style="  background: #1c1c1c; color: #ffc107;">
+<body>
 
-<header class="header">
-      <div class="container">
+<header class="header" >
+    <div class="container">
         <div
           class="d-flex flex-column align-items-center justify-content-center text-center"
         >
@@ -59,38 +59,39 @@
             <h2 class="ispsc-logo mb-0">ILOCOS SUR, PHILIPPINES</h2>
           </div>
         </div>
-      </div>
-    </header>
-
-
-    
-<div class="container">
-    <div class="my-5">
-  
-      <div class="mb-3">
-        
-          <a href="index.php" style="color: #ffc107;"> <p class="fst-italic fst-4"><i class="fa-solid fa-arrow-left fst-4"></i> Go back</p></a> 
-      <div class="d-lg-flex justify-content-lg-between">
-          <div>
-              <h1 style="font-weight: bold;" class="fs-3">  <?php echo $row['title']; ?></h1>
-          </div>
-          <div class="d-flex gap-4">
-            <i class="fa-brands fa-facebook fs-3"></i>
-            <i class="fa-brands fa-instagram fs-3"></i>
-            <i class="fa-solid fa-cloud-arrow-down fs-3"></i>
-          </div>
-      </div>
-          <p class="border-bottom border-white pb-2"><strong><i class="fa-solid fa-calendar"></i> Date Posted:</strong> <?php echo $row['date_posted']; ?></p>
-      </div>
-
-
-      <img src="<?php echo $row['image']; ?>" class="img-fluid" alt="<?php echo $row['title']; ?>" style="width: 50%; height: 50%; object-fit: cover;">
-
-      <div class="my-3">
-      <p><?php echo $row['content']; ?></p>
-      </div>
     </div>
-</div>
+</header>
+
+<div style=" color: #1c1c1c;">
+    <div class="container py-5" >
+            <div class="mb-3">
+                <a href="index.php" style="color: #1c1c1c"> <p class="fst-italic fst-4"><i class="fa-solid fa-arrow-left fst-4"></i> Go back</p></a> 
+                    <div class="d-lg-flex justify-content-lg-between">
+                        <div>
+                            <h1 style="font-weight: bold;" class="fs-3">  <?php echo $row['title']; ?></h1>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <i class="fa-brands fa-facebook fs-3"></i>
+                            <i class="fa-brands fa-instagram fs-3"></i>
+                            <i class="fa-solid fa-cloud-arrow-down fs-3"></i>
+                        </div>
+                    </div>
+                    <p class="border-bottom border-white pb-2"><strong><i class="fa-solid fa-calendar"></i> Date Posted:</strong> <?php echo $row['date_posted']; ?></p>
+                </div>
+
+                <div class="d-lg-flex d-md-flex d-sm-flex flex-sm-column flex-md-column">
+                    <div>
+                         <img src="<?php echo $row['image']; ?>" class=" w-100 h-100" alt="<?php echo $row['title']; ?>" style="object-fit: cover;">
+                    </div>
+                    <div class="my-3">
+                        <p><?php echo $row['content']; ?></p>
+                    </div>
+                </div>
+            
+    </div>
+</div> 
+
+<?php include "footer.php" ?>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="script/script.js"></script>
 <script>

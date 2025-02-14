@@ -2,7 +2,9 @@
   --maroon-800: #800000;
   --gold-500: #ffd700;
 }
-
+#menu {
+  filter: invert(1);
+}
 body {
   font-family: Arial, sans-serif;
 }

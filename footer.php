@@ -1,3 +1,49 @@
+<div class="d-flex justify-content-between gap-5 py-5 overflow-auto">
+      <img
+        src="img/image.png"
+        alt="WURI logo"
+        height="100"
+        width="250"
+        class="grayscale-img"
+      />
+      <img
+        src="img/socotec.png"
+        alt="SOCOTEC logo"
+        height="100"
+        width="180"
+        class="grayscale-img"
+      />
+      <img
+        src="img/bagong-pilipinas.png"
+        alt="Bagong Pilipinas logo"
+        height="100"
+        width="110"
+        class="grayscale-img"
+      />
+      <img
+        src="img/oip.png"
+        alt="OIP logo"
+        height="100"
+        width="150"
+        class="grayscale-img"
+      />
+
+      <img
+        src="img/ph-seal.png"
+        alt="Bagong Pilipinas logo"
+        height="100"
+        width="250"
+        class="grayscale-img"
+      />
+      <img
+        src="img/freedom.png"
+        alt="Bagong Pilipinas logo"
+        height="100"
+        width="110"
+        class="grayscale-img"
+      />
+</div>
+
 <footer style="position: relative; background: #1c1c1c; color: #ffc107;" class="mt-4 py-4">
     <!-- Background Image -->
     <div style="
