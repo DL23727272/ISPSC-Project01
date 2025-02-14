@@ -41,15 +41,14 @@ window.fetchNews = function () {
                   
                   <img src="img/ispsc.png" width="50" height="50"/>
                   <div>
-                    <h5 style="
-                    color: #ffc107;
-                    font-weight: bold;
-                    ">${item.title}</h5>
+
+                <a style="color: #ffc107; font-weight: bold;" href="view_news.php?id=${item.id}">${item.title}</a>
+
+                  
                     <p style="color: #d3d3d3; font-size: 0.85rem;"><i class="fa-solid fa-calendar"></i>   ${item.date_posted}</p>
                   </div>
 
                   </div>
-                  <p class="fs-italic fst-5" style="color: #ffc107;">${item.content}</p>
                   </div>
 
 

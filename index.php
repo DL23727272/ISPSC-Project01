@@ -19,6 +19,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="styles.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="img/logo.ico" />
   </head>
@@ -264,7 +265,7 @@
           >
             <h2 class="p-2 fs-5 fw-bold">Latest News</h2>
           </div>
-          <div id="news-container" class="mt-4">
+          <div id="news-container" class="mt-3">
             <p>Loading news...</p>
           </div>
         </div>
@@ -488,100 +489,68 @@
 
       <!-- End New Section -->
     </div>
-
-    <!--Contact-->
-    <div class="d-sm-flex flex-sm-column" id="contact">
-      <form action="contactForm.php" method="post" id="contactForms">
-        <h1 class="h6">Contact Us!</h1>
-        <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
-          <input
-            type="text"
-            name="name"
-            class="form-control"
-            aria-label="Name"
-            aria-describedby="inputGroup-sizing-sm"
-          />
+    <div class="container-fluid h-50">
+        <div class="row g-0">
+            <!-- Left Side (Image & Text) -->
+            <div class="col-md-6 d-flex align-items-center justify-content-center text-center position-relative text-light py-4" 
+        style="background: url('img/contact.jpg') center/cover no-repeat; min-height: 60vh;">
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75"></div>
+        <div class="position-relative">
+            <h1 class="display-5 fw-bold">Empowering Minds, Shaping Futures</h1>
+            <p class="fs-5">Excellence in Education, Leadership, and Innovation</p>
+            <a href="#" class="btn btn-outline-light btn-sm fw-bold">Learn More</a>
         </div>
-        <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Email</span>
-          <input
-            type="email"
-            name="email"
-            class="form-control"
-            aria-label="Email"
-            aria-describedby="inputGroup-sizing-sm"
-          />
-        </div>
-        <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm"
-            >Subject</span
-          >
-          <input
-            type="text"
-            name="subject"
-            class="form-control"
-            aria-label="Subject"
-            aria-describedby="inputGroup-sizing-sm"
-          />
-        </div>
-        <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm"
-            >Message</span
-          >
-          <textarea
-            type="text"
-            name="message"
-            class="form-control"
-            aria-label="Message"
-            aria-describedby="inputGroup-sizing-sm"
-          ></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Send Message</button>
-      </form>
     </div>
 
-    <footer class="bg-light mt-4 py-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <h5>Contact Us</h5>
-            <p>
-              123 University Avenue<br />Ilocos Sur, Philippines<br />Phone:
-              (123) 456-7890<br />Email: psychology@ispsc.edu.ph
-            </p>
-          </div>
-          <div class="col-md-4">
-            <h5>Follow Us</h5>
-            <p>
-              <a href="#" class="text-decoration-none me-2">Facebook</a>
-              <a href="#" class="text-decoration-none me-2">Twitter</a>
-              <a href="#" class="text-decoration-none">Instagram</a>
-            </p>
-          </div>
-          <div class="col-md-4">
-            <h5>Quick Links</h5>
-            <ul class="list-unstyled">
-              <li>
-                <a href="#" class="text-decoration-none">Privacy Policy</a>
-              </li>
-              <li><a href="#" class="text-decoration-none">Terms of Use</a></li>
-              <li><a href="#" class="text-decoration-none">Site Map</a></li>
-            </ul>
-          </div>
+
+        <!-- Right Side (Contact Form with Maroon Background & Dots Overlay) -->
+        <div class="col-md-6 d-flex align-items-center justify-content-center text-dark p-4 position-relative" 
+             style="background: #800000; min-height: 60vh;">
+             
+            <!-- Dots Overlay -->
+            <div class="position-absolute top-0 start-0 w-100 h-100" 
+                 style="background: url('img/dots.png') center/cover no-repeat; filter: invert(1); opacity: 15%;"></div>
+
+            <!-- Form Content -->
+            <div class="w-100 position-relative" style="max-width: 400px;">
+                <h2 class="fw-bold text-center fs-4" style="color: #ffc107;">Contact Us</h2>
+                <p class="text-center fs-6" style="color: #ffc107;">We’d love to hear from you. Fill in the details below.</p>
+                <form id="contactForms">
+                    <div class="d-flex flex-column mb-2">
+                        <span class="text-white"><i class="fa-solid fa-user"></i> Name</span>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Your name here" required />
+                    </div>
+                    <div class="d-flex flex-column mb-2">
+                        <span class="text-white"><i class="fa-solid fa-envelope"></i> Email</span>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Your email here" required />
+                    </div>
+                    <div class="d-flex flex-column mb-2">
+                        <span class="text-white"><i class="fa-solid fa-book"></i> Subject</span>
+                        <input type="text" name="subject" id="subject" class="form-control" placeholder="Your subject here" required />
+                    </div>
+                    <div class="d-flex flex-column mb-2">
+                        <span class="text-white"><i class="fa-solid fa-message"></i> Message</span>
+                        <textarea name="message" id="message" class="form-control" placeholder="Your message here" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-outline-light btn-sm fw-bold w-100" >Send Message</button>
+                </form>
+            </div>
         </div>
-        <hr />
-        <p class="text-center mb-0">
-          &copy; 2024 ISPSC Department of Psychology. All rights reserved.
-        </p>
-      </div>
-    </footer>
+    </div>
+</div>
+
+
+    <!-- Contact -->
+
+    <?php include "footer.php"?>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script/script.js"></script>
     <script src="script/fetch_news.js"></script>
     <script src="script/add_news.js"></script>
+    <script src="script/email_sender.js"></script>
+
     <script>
       $(document).ready(function () {
         function startMarquee() {
