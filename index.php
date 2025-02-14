@@ -19,6 +19,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="styles.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="img/logo.ico" />
   </head>
@@ -264,7 +265,7 @@
           >
             <h2 class="p-2 fs-5 fw-bold">Latest News</h2>
           </div>
-          <div id="news-container" class="mt-4">
+          <div id="news-container" class="mt-3">
             <p>Loading news...</p>
           </div>
         </div>
@@ -489,99 +490,62 @@
       <!-- End New Section -->
     </div>
 
-    <!--Contact-->
+    <!-- Contact -->
     <div class="d-sm-flex flex-sm-column" id="contact">
-      <form action="contactForm.php" method="post" id="contactForms">
+      <form id="contactForms">
         <h1 class="h6">Contact Us!</h1>
         <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+          <span class="input-group-text">Name</span>
           <input
             type="text"
             name="name"
+            id="name"
             class="form-control"
-            aria-label="Name"
-            aria-describedby="inputGroup-sizing-sm"
+            required
           />
         </div>
         <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Email</span>
+          <span class="input-group-text">Email</span>
           <input
             type="email"
             name="email"
+            id="email"
             class="form-control"
-            aria-label="Email"
-            aria-describedby="inputGroup-sizing-sm"
+            required
           />
         </div>
         <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm"
-            >Subject</span
-          >
+          <span class="input-group-text">Subject</span>
           <input
             type="text"
             name="subject"
+            id="subject"
             class="form-control"
-            aria-label="Subject"
-            aria-describedby="inputGroup-sizing-sm"
+            required
           />
         </div>
         <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm"
-            >Message</span
-          >
+          <span class="input-group-text">Message</span>
           <textarea
-            type="text"
             name="message"
+            id="message"
             class="form-control"
-            aria-label="Message"
-            aria-describedby="inputGroup-sizing-sm"
+            required
           ></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Send Message</button>
       </form>
     </div>
 
-    <footer class="bg-light mt-4 py-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <h5>Contact Us</h5>
-            <p>
-              123 University Avenue<br />Ilocos Sur, Philippines<br />Phone:
-              (123) 456-7890<br />Email: psychology@ispsc.edu.ph
-            </p>
-          </div>
-          <div class="col-md-4">
-            <h5>Follow Us</h5>
-            <p>
-              <a href="#" class="text-decoration-none me-2">Facebook</a>
-              <a href="#" class="text-decoration-none me-2">Twitter</a>
-              <a href="#" class="text-decoration-none">Instagram</a>
-            </p>
-          </div>
-          <div class="col-md-4">
-            <h5>Quick Links</h5>
-            <ul class="list-unstyled">
-              <li>
-                <a href="#" class="text-decoration-none">Privacy Policy</a>
-              </li>
-              <li><a href="#" class="text-decoration-none">Terms of Use</a></li>
-              <li><a href="#" class="text-decoration-none">Site Map</a></li>
-            </ul>
-          </div>
-        </div>
-        <hr />
-        <p class="text-center mb-0">
-          &copy; 2024 ISPSC Department of Psychology. All rights reserved.
-        </p>
-      </div>
-    </footer>
+    <?php include "footer.php"?>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script/script.js"></script>
     <script src="script/fetch_news.js"></script>
     <script src="script/add_news.js"></script>
+    <script src="script/email_sender.js"></script>
+
     <script>
       $(document).ready(function () {
         function startMarquee() {
