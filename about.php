@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Instruction - ISPSC Department of Psychology</title>
+    <title>About</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -53,54 +53,54 @@
     <nav class="navbar navbar-expand-lg">
       <div class="container">
         <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="navbar-toggler-icon" id="menu"></i>
+        </button>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
               <a
-                class="nav-link active"
-                aria-current="page"
-                style="color: yellow"
-                href="instruction.html"
-                >Instruction</a
+                class="nav-link "
+                href="index.php"
+                >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="research.html">Research</a>
+              <a class="nav-link active"  style="color: yellow"
+              aria-current="page" href="about.php">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="extension.html">Extension</a>
+              <a class="nav-link" href="instruction.php">Instruction</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="internationalization.html"
+              <a class="nav-link" href="research.php">Research</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="extension.php">Extension</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="internationalization.php"
                 >Internationalization</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="psychometrician-reviewer.html"
+              <a class="nav-link" href="psychometrician-reviewer.php"
                 >Psychometrician Reviewer</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="alumni.html">Alumni</a>
+              <a class="nav-link" href="alumni.php">Alumni</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="others.html">Others</a>
+              <a class="nav-link" href="others.php">Others</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -117,67 +117,25 @@
     </nav>
 
     <main class="container my-4">
-      <h1>Instruction</h1>
+      <h1>About the Department of Psychology</h1>
       <p class="lead">
-        This page provides guidance and instructions for students and faculty
-        regarding academic procedures, course requirements, and departmental
-        policies. Detailed step-by-step instructions, tutorials, and FAQs help
-        users navigate academic systems and resources effectively.
+        The Department of Psychology at ISPSC is dedicated to understanding
+        human behavior and fostering academic excellence. We offer programs that
+        combine theoretical knowledge with practical application.
       </p>
-      <ul>
-        <li>How to register for courses</li>
-        <li>Using online learning platforms</li>
-        <li>Submitting assignments and feedback guidelines</li>
-        <li>Departmental policies and procedures</li>
-      </ul>
+      <p>
+        Our department emphasizes innovative research and quality education,
+        preparing students for diverse careers in psychology and related fields.
+      </p>
       <img
         src="placeholder.svg"
-        alt="Instruction"
+        alt="About Us"
         class="img-fluid rounded shadow-sm mb-4"
       />
     </main>
 
-    <footer class="bg-light mt-4 py-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <h5>Contact Us</h5>
-            <p>
-              123 University Avenue<br />
-              Ilocos Sur, Philippines<br />
-              Phone: (123) 456-7890<br />
-              Email: psychology@ispsc.edu.ph
-            </p>
-          </div>
-          <div class="col-md-4">
-            <h5>Follow Us</h5>
-            <p>
-              <a href="#" class="text-decoration-none me-2">Facebook</a>
-              <a href="#" class="text-decoration-none me-2">Twitter</a>
-              <a href="#" class="text-decoration-none">Instagram</a>
-            </p>
-          </div>
-          <div class="col-md-4">
-            <h5>Quick Links</h5>
-            <ul class="list-unstyled">
-              <li>
-                <a href="#" class="text-decoration-none">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#" class="text-decoration-none">Terms of Use</a>
-              </li>
-              <li>
-                <a href="#" class="text-decoration-none">Site Map</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <hr />
-        <p class="text-center mb-0">
-          &copy; 2024 ISPSC Department of Psychology. All rights reserved.
-        </p>
-      </div>
-    </footer>
+   
+    <?php include "footer.php"?>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

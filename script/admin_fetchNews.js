@@ -4,6 +4,9 @@ function fetchNews() {
         method: "GET",
         dataType: "json",
         success: function (newsData) {
+            // Sort manually in case backend doesn't return in correct order
+            newsData.sort((b, a) => a.id - b.id); 
+
             let tableContent = "";
             newsData.forEach(news => {
                 tableContent += `

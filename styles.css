@@ -6,6 +6,9 @@
 body {
   font-family: Arial, sans-serif;
 }
+#menu {
+  filter: invert(1);
+}
 
 /* * {
   border: 1px solid red;
