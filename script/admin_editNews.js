@@ -33,39 +33,48 @@
   
     // Submit edit form
     $("#editNewsForm").submit(function (event) {
-      event.preventDefault();
+        event.preventDefault();
 
-      let formData = new FormData(this);
+        let formData = new FormData(this);
 
-      $.ajax({
-          url: "backend/edit_news.php",
-          method: "POST",
-          data: formData,
-          dataType: "json",
-          contentType: false, 
-          processData: false, 
-          success: function (response) {
-              console.log("Update Response:", response); 
+        $.ajax({
+            url: "backend/edit_news.php",
+            method: "POST",
+            data: formData,
+            dataType: "json",
+            contentType: false, 
+            processData: false, 
+            success: function (response) {
+                console.log("Update Response:", response); 
 
-              if (response.success) { 
-                  Swal.fire({
-                      title: "Updated!",
-                      text: "News has been updated.",
-                      icon: "success",
-                      timer: 1500,
-                      showConfirmButton: false
-                  }).then(() => {
-                      $("#editNewsModal").modal("hide"); // Close modal
-                      fetchNews(); // Refresh table
-                  });
-              } else {
-                  Swal.fire("Error!", "Failed to update news. Please try again.", "error");
-              }
-          },
-          error: function (error) {
-              console.error("Error updating news:", error);
-              Swal.fire("Error!", "Failed to update news due to a server issue.", "error");
-          }
-      });
+                if (response.no_changes) {
+                    Swal.fire({
+                        title: "No Changes Detected",
+                        text: "No updates were made as no changes were found.",
+                        icon: "info",
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                } else if (response.success) { 
+                    Swal.fire({
+                        title: "Updated!",
+                        text: "News has been updated.",
+                        icon: "success",
+                        timer: 1500,
+                        showConfirmButton: false
+                    }).then(() => {
+                        $("#editNewsModal").modal("hide"); // Close modal
+                        fetchNews(); // Refresh table
+                    });
+                } else {
+                    Swal.fire("Error!", "Failed to update news. Please try again.", "error");
+                }
+            },
+            error: function (error) {
+                console.error("Error updating news:", error);
+                Swal.fire("Error!", "Failed to update news due to a server issue.", "error");
+            }
+        });
     });
+
 

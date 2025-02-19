@@ -9,21 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $targetDir = "../news/";
     $targetFilePath = "";
 
-    // Fetch existing data
-    $query = "SELECT title, content, date_posted, image FROM news WHERE id='$id'";
-    $result = mysqli_query($con, $query);
-    $row = mysqli_fetch_assoc($result);
-
-    if (!$row) {
-        echo json_encode(["error" => "News item not found"]);
-        exit;
-    }
-
-    $existingTitle = $row["title"];
-    $existingContent = $row["content"];
-    $existingDate = $row["date_posted"];
-    $existingImage = $row["image"];
-
     // Ensure the uploads folder exists
     if (!is_dir($targetDir)) {
         mkdir($targetDir, 0777, true);
@@ -50,16 +35,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     } else {
         // Keep the old image if no new image is uploaded
-        $targetFilePath = $existingImage;
+        $query = "SELECT image FROM news WHERE id='$id'";
+        $result = mysqli_query($con, $query);
+        $row = mysqli_fetch_assoc($result);
+        $targetFilePath = $row["image"];
     }
 
-    // Check if any changes were made
-    if ($title == $existingTitle && $content == $existingContent && $date == $existingDate && $targetFilePath == $existingImage) {
-        echo json_encode(["no_changes" => true]);
-        exit;
-    }
-
-    // Update the news record if changes are detected
+    // Update the news record
     $sql = "UPDATE news SET title='$title', content='$content', date_posted='$date', image='$targetFilePath' WHERE id='$id'";
     if (mysqli_query($con, $sql)) {
         echo json_encode(["success" => true]);
