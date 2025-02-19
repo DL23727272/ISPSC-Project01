@@ -574,17 +574,13 @@
                             <span class="text-white"><i class="fa-solid fa-message"></i> Message</span>
                             <textarea name="message" id="message" class="form-control" placeholder="Your message here" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-outline-light btn-sm fw-bold w-100" >Send Message</button>
+                        <button type="submit" class="btn btn-outline-light btn-sm fw-bold w-100 sendMessage" >Send Message</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
  <!-------------------- END Contact FORM -------------------->
-
-
-
-
 
     <?php include "footer.php"?>
 

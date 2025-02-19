@@ -15,16 +15,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Server settings
         $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';
+        $mail->Host       = 'smtp.hostinger.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'dldoesvisuals@gmail.com';
-        $mail->Password   = 'cvuc prcc ekry kzag';
+        $mail->Username   = 'psychopage@ispsc.personatab.com';
+        // $mail->Password   = 'cvuc prcc ekry kzag';
+        $mail->Password   = 'psychoPage@123';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port       = 465;
 
         // Set sender as your Gmail, but name it after the user
-        $mail->setFrom('dldoesvisuals@gmail.com', $name);  
-        $mail->addAddress('gamosodl@gmail.com', 'Recipient Name'); 
+        $mail->setFrom('psychopage@ispsc.personatab.com', $name);  
+        $mail->addAddress('psychopage@ispsc.personatab.com', 'Recipient Name'); 
         $mail->addReplyTo($email, $name); 
 
         // Email content

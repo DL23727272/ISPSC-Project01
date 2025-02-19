@@ -180,53 +180,20 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
+          <li class="nav-item">
               <a
                 class="nav-link active"
                 style="color: yellow"
                 aria-current="page"
-                href="index.php"
+                href="admin.php"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.php">About</a>
+              <a class="nav-link" href="admin_users.php">Users</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="instruction.php">Instruction</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="research.php">Research</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="extension.php">Extension</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="internationalization.php"
-                >Internationalization</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="psychometrician-reviewer.php"
-                >Psychometrician Reviewer</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="alumni.php">Alumni</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="others.php">Others</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-light" type="submit">Search</button>
-          </form>
+            
+            
         </div>
       </div>
     </nav>
@@ -235,12 +202,12 @@
      
 
       
-      <div class="row row-cols-4">
+      <div>
 
         <!------------------- NEWS SECTION------------------------- -->
 
-        <div class="col-md-8">
-            <div class="d-flex align-items-center justify-content-between bg-primary text-white p-2">
+        <div class="overflow-auto">
+            <div class="d-flex align-items-center justify-content-between text-white p-2 " style="background:#800000">
               <h2 class="fs-5 fw-bold">Manage News</h2>
               <i class="fa-solid fa-plus px-4" data-bs-toggle="modal" data-bs-target="#addNewsModal"></i>
             </div>
