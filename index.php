@@ -339,6 +339,15 @@
                     Alumni</a
                   >
                 </li>
+                <li class="list-group-item">
+                  <a href="login.php" class="text-decoration-none"
+                    ><i
+                      class="fa-solid fa-user"
+                      style="color: #800000"
+                    ></i>
+                    Login</a
+                  >
+                </li>
               </ul>
             </div>
           </div>

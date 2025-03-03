@@ -182,43 +182,25 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a
+                class="nav-link"
+                href="index.php"
+                ><i class="fa-solid fa-power-off"></i> Logout</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
                 class="nav-link active"
                 style="color: yellow"
                 aria-current="page"
                 href="index.php"
-                >Home</a
+                >News</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.php">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="instruction.php">Instruction</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="research.php">Research</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="extension.php">Extension</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="internationalization.php"
-                >Internationalization</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="psychometrician-reviewer.php"
-                >Psychometrician Reviewer</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="alumni.php">Alumni</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="others.php">Others</a>
+              <a class="nav-link" href="accounts.php"> Accounts</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
+          <!-- <form class="d-flex" role="search">
             <input
               class="form-control me-2"
               type="search"
@@ -226,7 +208,7 @@
               aria-label="Search"
             />
             <button class="btn btn-outline-light" type="submit">Search</button>
-          </form>
+          </form> -->
         </div>
       </div>
     </nav>
@@ -314,6 +296,27 @@
         }
         startMarquee();
       });
+
+      console.log("Developed by: Dran Leynard P. Gamoso");
+        console.log("DL's Portfolio: " + "https://dlportfolio.personatab.com/");
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let empID = sessionStorage.getItem("username");
+            console.log("Stored Employee ID:", empID);
+
+            // If no employee ID is found, show SweetAlert and redirect
+            if (!empID) {
+                Swal.fire({
+                    icon: "error",
+                    title: "No Employee ID Found",
+                    text: "Please log in to continue.",
+                    confirmButtonColor: "#800000"
+                }).then(() => {
+                    window.location.href = "index.php"; // Redirect to login page
+                });
+                return; // Stop further script execution
+            }
+        });
     </script>
   </body>
 </html>
