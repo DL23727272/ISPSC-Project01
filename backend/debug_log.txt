@@ -24,3 +24,11 @@ Received: userID=2, username=Ruvic, userType=user, password=12345678
 Received: userID=2, username=Ruvics, userType=user, password=12345678
 Received: userID=2, username=Ruvic1, userType=user, password=
 Received: userID=2, username=Ruvic, userType=user, password=
+Received: userID=2, username=Ruvic, userType=user, password=12345678
+Received: userID=2, username=Ruvic, userType=user, password=123456789
+Received: userID=2, username=Ruvic, userType=user, password=12345678
+Received: userID=2, username=Ruvic, userType=admin, password=
+Received: userID=2, username=Ruvic, userType=user, password=
+Received: userID=4, username=leimar, userType=admin, password=
+Received: userID=4, username=leimar, userType=user, password=
+Received: userID=4, username=DL, userType=user, password=

@@ -52,6 +52,44 @@ $("#updateUserBtn").on("click", function () {
     });
 });
 
+// Handle Delete Button Click
+$("#deleteUserBtn").on("click", function () {
+    let userID = $("#editUserID").val();
+
+    Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#d33",
+        cancelButtonColor: "#3085d6",
+        confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                url: "backend/admin_editUser.php",
+                type: "POST",
+                dataType: "json",
+                data: { deleteUser: true, userID: userID },
+                success: function (response) {
+                    console.log("Response from PHP:", response);
+
+                    Swal.fire(response.message, "", response.status === "success" ? "success" : "error").then(() => {
+                        $("#editUserModal").modal("hide"); // Hide modal on success
+                        fetchUsers(); // Reload users after deletion
+                    });
+                },
+                error: function (xhr, status, error) {
+                    console.log("AJAX Error:", status, error);
+                    console.log("XHR Response:", xhr.responseText);
+                }
+            });
+        }
+    });
+});
+
+
+
 // Function to reload users
 function fetchUsers(search = "") {
     $.ajax({
