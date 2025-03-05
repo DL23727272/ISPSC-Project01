@@ -2,6 +2,7 @@
 header('Content-Type: application/json');
  include "../backend/myConnection.php";
 
+// $sql = "SELECT * FROM news ORDER BY id DESC LIMIT 5;"; 
 $sql = "SELECT * FROM news ORDER BY id DESC;"; 
 $result = $con->query($sql);
 
