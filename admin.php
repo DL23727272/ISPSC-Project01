@@ -217,7 +217,6 @@
      
 
       
-      <div class="row row-cols-4">
 
         <!------------------- NEWS SECTION------------------------- -->
 
@@ -226,28 +225,28 @@
               <h2 class="fs-5 fw-bold">Manage News</h2>
               <i class="fa-solid fa-plus px-4" data-bs-toggle="modal" data-bs-target="#addNewsModal"></i>
             </div>
-            
-            <table class="table table-bordered mt-3">
-              <thead class="table-dark">
-                <tr>
-                  <th>Title</th>
-                  <th>Content</th>
-                  <th>Image</th>
-                  <th>Date</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-              <tbody id="newsTableBody">
-                <!-- News entries will be inserted here dynamically -->
-              </tbody>
-            </table>
+            <div class="table-responsive">
+              <table class="table table-bordered mt-3">
+                <thead class="table-dark">
+                  <tr>
+                    <th>Title</th>
+                    <th>Content</th>
+                    <th>Image</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="newsTableBody">
+                  <!-- News entries will be inserted here dynamically -->
+                </tbody>
+              </table>
+            </div>
           </div>
           
 
         <!------------------ END NEWS SECTION ------------------>
 
        
-      </div>
 
     </div>
 
